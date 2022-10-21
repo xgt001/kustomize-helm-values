@@ -1,0 +1,9 @@
+apiVersion: builtin
+kind: HelmChartInflationGenerator
+metadata:
+  name: kube-prometheus-stack
+valuesInline:
+  prometheus:
+    serviceAccount:
+      annotations:
+        eks.amazonaws.com/role-arn: arn:aws:iam::000000000:role/thanos
